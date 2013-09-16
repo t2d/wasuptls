@@ -1,2 +1,4 @@
 Forward Secrecy gegen kompromitierter Server-Key -> (ECC)DHE
+	- Forward Secrecy testen und einrichten: http://www.heise.de/security/artikel/Forward-Secrecy-testen-und-einrichten-1932806.html
+
 ECC -> kleine Bitlänge -> gute Performance  - aber vllt nicht mit NIST-Kurven!
