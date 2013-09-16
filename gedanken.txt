@@ -1,9 +1,11 @@
 1. Forward Secrecy gegen kompromitierter Server-Key -> (EC)DHE
  * IE kann kein DHE und wird es vermutlich nicht lernen 
  -> ECDHE-RSA (RSA verbreiteter)
+ 
+ -> kann Apache erst ab 2.4, aber wir könnten nginx aus debian stable nehmen. das ist sogar schneller
 
-DHE-DSS konnten alle, aber DES wollen wir nicht 
+DHE-DSS konnten alle, aber DSA wollen wir nicht, weil zu abhängig von gutem Zufallszahlengenerator, oder?
 
-- Forward Secrecy testen und einrichten: http://www.heise.de/security/artikel/Forward-Secrecy-testen-und-einrichten-1932806.html
-	
 ECC -> kleine Bitlänge -> gute Performance  - aber vllt nicht mit NIST-Kurven!
+
+btw: github nervt als ort zum ideen sammeln.
