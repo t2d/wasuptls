@@ -1,0 +1,5 @@
+ * Lucky13 
+ * CRIME
+ * TIME
+ * BREACH
+ * BEAST -> clientseitig behoben (https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat)
