@@ -1,4 +1,10 @@
+1. Forward Secrecy gegen kompromitierter Server-Key -> (EC)DHE
+ * IE kann kein DHE und wird es vermutlich nicht lernen 
+ -> ECDHE-RSA (RSA verbreiteter)
+
+DHE-DSS konnten alle, aber DES wollen wir nicht 
+
 Forward Secrecy gegen kompromitierter Server-Key -> (ECC)DHE
 	- Forward Secrecy testen und einrichten: http://www.heise.de/security/artikel/Forward-Secrecy-testen-und-einrichten-1932806.html
-
+	
 ECC -> kleine Bitlänge -> gute Performance  - aber vllt nicht mit NIST-Kurven!
