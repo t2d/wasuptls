@@ -13,3 +13,4 @@ Sources for starting:
  * http://blog.cryptographyengineering.com/2013/09/on-nsa.html
  * https://www.openssl.org/docs/apps/ciphers.html
  * "Real World SSL Benchmarking" http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.199.1946&rep=rep1&type=pdf
+ * Forward-Secrecy: http://www.heise.de/security/artikel/Zukunftssicher-Verschluesseln-mit-Perfect-Forward-Secrecy-1923800.html
