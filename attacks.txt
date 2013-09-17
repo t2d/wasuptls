@@ -8,3 +8,6 @@
  * TIME
  * BREACH
  für beide siehe (und alle anderen) siehe https://www.isecpartners.com/media/106031/ssl_attacks_survey.pdf
+
+ * TLS-Erweiterung für Session Tickets (http://www.heise.de/security/meldung/Black-Hat-TLS-Erweiterung-schwaecht-Sicherheit-der-Verschluesselung-1928081.html) 
+  -> Ticket-gültigkeit sollte Tradeof zwischen ServerLast und Sicherheit sein. Lässt sich in neueren Apache-Versionen selbst festlegen.
