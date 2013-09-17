@@ -13,4 +13,4 @@ Sources for starting:
  * http://blog.cryptographyengineering.com/2013/09/on-nsa.html
  * https://www.openssl.org/docs/apps/ciphers.html
  * "Real World SSL Benchmarking" http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.199.1946&rep=rep1&type=pdf
- * Configuring Forward Secrecy: https://community.qualys.com/blogs/securitylabs/2013/06/25/ssl-labs-deploying-forward-secrecy
+ * Configuring Forward Secrecy: https://community.qualys.com/blogs/securitylabs/2013/06/25/ssl-labs-deploying-forward-secrecy and http://blog.ivanristic.com/2013/08/configuring-apache-nginx-and-openssl-for-forward-secrecy.html
