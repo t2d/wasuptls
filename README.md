@@ -14,3 +14,4 @@ Sources for starting:
  * https://www.openssl.org/docs/apps/ciphers.html
  * "Real World SSL Benchmarking" http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.199.1946&rep=rep1&type=pdf
  * Forward-Secrecy: http://www.heise.de/security/artikel/Zukunftssicher-Verschluesseln-mit-Perfect-Forward-Secrecy-1923800.html
+ * Configuring Forward Secrecy: https://community.qualys.com/blogs/securitylabs/2013/06/25/ssl-labs-deploying-forward-secrecy
