@@ -37,7 +37,7 @@ function PHPtoJSResponse(data) {
 	
 	   popup += "Your HTTPS connections doesn't use the up-to-date standards and might therefore be unsecure! Please update your browser to the newest version!<br /><ul>";
 	   if (!usingFS) {
-		   popup += '<li>No <a href="http://en.wikipedia.org/wiki/Forward_secrecy">Forward Secrecy</a> is used!</li>";
+		   popup += '<li>No <a href="http://en.wikipedia.org/wiki/Forward_secrecy">Forward Secrecy</a> is used!</li>';
 	   }
 	   if (usingRC4) {
 		   popup += '<li>The <a href="http://en.wikipedia.org/wiki/Rc4">old RC4 encryption standard</a> is used!</li>';
