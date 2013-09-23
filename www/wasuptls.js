@@ -12,7 +12,7 @@ function PHPtoJSResponse(data) {
    var response = $.parseJSON(data);
    var cipher = response.cipher;
    var version = response.version;
-   // alert("TLS-Version: " + response.version + "\nCipher: " + response.cipher + "\nKeysize: " + response.keysize);
+   //alert("TLS-Version: " + response.version + "\nCipher: " + response.cipher + "\nKeysize: " + response.keysize);
 
    // Testing Forward Secrecy
    var usingFS;
@@ -35,6 +35,7 @@ function PHPtoJSResponse(data) {
    if(!usingFS || usingRC4 || usingSSLv3) {
     	var popup = '<div style="position: fixed; width: 100%; height: 100px; background-color: #3366CC; color: white; padding: 10px; bottom: 0; left:0; font-family: Helvetic, sans-serif; font-size: 12pt; box-shadow: 0 0 10px #000000 ">';
 	
+		popup += '<a href="javascript: $(this).parent().hide();" style="display:block; float:right; width: 25px; height:25px; barground: url(\"close_button.png\") no-repeat center center;">close</a>'
 	   popup += "Your HTTPS connections doesn't use the up-to-date standards and might therefore be unsecure! Please update your browser to the newest version!<br /><ul>";
 	   if (!usingFS) {
 		   popup += '<li>No <a href="http://en.wikipedia.org/wiki/Forward_secrecy">Forward Secrecy</a> is used!</li>';
