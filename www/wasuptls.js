@@ -16,7 +16,7 @@ function PHPtoJSResponse(data) {
 
    // Testing Forward Secrecy
    var usingFS;
-   var m = cipher.match(/^ECDH|^DH/g);
+   var m = cipher.match(/ECDH|DH/g);
    if (m == null) usingFS = false; 
    else usingFS = true; 
 
