@@ -26,13 +26,19 @@ function PHPtoJSResponse(data) {
    if (m == null) usingRC4 = false; 
    else usingRC4 = true; 
 
+   // Test for 3DES 
+   var using3DES;
+   var m = cipher.match(/DES/g);
+   if (m == null) using3DES = false; 
+   else using3DES = true; 
+
    // Test for SSLv3
    var usingSSLv3;
    var m = version.match(/SSLv3/g);
    if (m == null) usingSSLv3 = false; 
    else usingSSLv3 = true; 
 
-   if(!usingFS || usingRC4 || usingSSLv3) {
+   if(!usingFS || usingRC4 || usering3DES || usingSSLv3) {
     	var popup = '<div style="position: fixed; width: 100%; height: 100px; background-color: #3366CC; color: white; padding: 10px; bottom: 0; left:0; font-family: Helvetic, sans-serif; font-size: 12pt; box-shadow: 0 0 10px #000000 ">';
 	
 		popup += '<a href="#" onclick="$(this).parent().hide()"><img src="close_button.png" alt="(close)" style="float:right; margin-right: 20px" /></a>';
