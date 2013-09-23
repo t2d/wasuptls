@@ -22,13 +22,13 @@ function PHPtoJSResponse(data) {
 
    // Test for RC4
    var usingRC4;
-   var m = cipher.match(/*RC4*/g);
+   var m = cipher.match(/RC4/g);
    if (m == null) usingRC4 = false; 
    else usingRC4 = true; 
 
    // Test for SSLv3
    var usingSSLv3;
-   var m = version.match(/*SSLv3*/g);
+   var m = version.match(/SSLv3/g);
    if (m == null) usingSSLv3 = false; 
    else usingSSLv3 = true; 
 
