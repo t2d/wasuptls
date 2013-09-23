@@ -12,7 +12,7 @@ function PHPtoJSResponse(data) {
    var response = $.parseJSON(data);
    var cipher = response.cipher;
    var version = response.version;
-   alert("TLS-Version: " + response.version + "\nCipher: " + response.cipher + "\nKeysize: " + response.keysize);
+   // alert("TLS-Version: " + response.version + "\nCipher: " + response.cipher + "\nKeysize: " + response.keysize);
 
    // Testing Forward Secrecy
    var usingFS;

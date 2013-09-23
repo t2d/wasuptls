@@ -5,5 +5,8 @@
 </head>
 <body>
 <h1>TEST</h1>
+<?php
+echo $_SERVER['SSL_PROTOCOL'] . '<br>' . $_SERVER['SSL_CIPHER'] . '<br>' . $_SERVER['SSL_CIPHER_USEKEYSIZE'];
+?>
 </body>
 </html>
