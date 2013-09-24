@@ -8,7 +8,7 @@ $(function() {
 });
  
 function PHPtoJSResponse(data) {
-   // Antwort des Server ggf. verarbeiten
+   // process server response
    var response = $.parseJSON(data);
    var cipher = response.cipher;
    var version = response.version;
