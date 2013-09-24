@@ -12,7 +12,7 @@ The project consists of three parts which should be used together.
  
 The logic is in the combination of Apache configuration and JS, server-side script is just glue.
 
-Decicions
+Decisions
 ---------
  * Based on stable software (Debian wheezy, OpenSSL 1.0.1e and Apache 2.4)
  * Export TLS information via PHP, but easy to do in any language
