@@ -1,16 +1,26 @@
 wasuptls
 ========
 
-apache2 tls config with recent attacks in mind
+The goal of wasuptls is to provide an Apache2 configuration for websites with sensible data.
+It must be working _today_ and not exclude any users. Instead users with unsafe browsers should be warned.
+wasuptls should be easy to embed in already existing websites.
 
+The project consists of three parts which should be used together.
+ * Apache2 config file
+ * Server-side script to export TLS information
+ * Client-side script to warn users with unsafe browsers
+ 
+The logic is in the combination of Apache configuration and JS, server-side script is just glue.
 
-Sources for starting:
----------------------
+Decicions
+---------
+ * Based on stable software (Debian wheezy and Apache 2.4)
+ * Export TLS information via PHP, but easy to do in any language
+ * BEAST is considered to be mitigated client-side, Priority is Forward Secrecy -> no RC4
+
+Sources
+-------
+ * https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices_1.3.pdf
  * http://www.heise.de/security/artikel/Forward-Secrecy-testen-und-einrichten-1932806.html
  * http://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
  * https://github.com/ioerror/duraconf
- * https://github.com/ioerror/duraconf/tree/master/configs/apache2
- * http://blog.cryptographyengineering.com/2013/09/on-nsa.html
- * https://www.openssl.org/docs/apps/ciphers.html
- * "Real World SSL Benchmarking" http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.199.1946&rep=rep1&type=pdf
- * Configuring Forward Secrecy: https://community.qualys.com/blogs/securitylabs/2013/06/25/ssl-labs-deploying-forward-secrecy and http://blog.ivanristic.com/2013/08/configuring-apache-nginx-and-openssl-for-forward-secrecy.html
