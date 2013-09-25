@@ -13,7 +13,7 @@ fi
 /bin/echo 'deb-src http://ftp.debian.org/debian/ jessie main' >> /etc/apt/sources.list.d/jessie.list
 
 /usr/bin/apt-get update
-/usr/bin/apt-get install -y -t jessie apache2 libapache2-mod-php5
-/usr/sbin/a2enmod ssl headers rewrite php5
+/usr/bin/apt-get install -y -t jessie apache2
+/usr/sbin/a2enmod ssl headers rewrite include
 
 /etc/init.d/apache2 restart
