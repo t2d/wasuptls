@@ -7,7 +7,7 @@ wasuptls should be easy to embed in already existing websites.
 
 The project consists of three parts which should be used together.
  * Apache2 config file
- * Server-side script to export TLS information
+ * Server-side script TLS information
  * Client-side script to warn users with unsafe browsers
  
 The logic is in the combination of Apache configuration and JS, server-side script is just glue.
@@ -15,7 +15,7 @@ The logic is in the combination of Apache configuration and JS, server-side scri
 Decisions
 ---------
  * Based on stable software (Debian wheezy, OpenSSL 1.0.1e and Apache 2.4)
- * Export TLS information via PHP, but easy to do in any language
+ * Export TLS information via SSI, but easy to do in any language
  * BEAST is considered to be mitigated client-side, Priority is Forward Secrecy -> no RC4
  * Prefer ECDHE over DHE
  * HTTP Strict Transport Security
