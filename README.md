@@ -17,6 +17,7 @@ Decisions
  * Based on stable software (Debian wheezy, OpenSSL 1.0.1e and Apache 2.4)
  * Export TLS information via PHP, but easy to do in any language
  * BEAST is considered to be mitigated client-side, Priority is Forward Secrecy -> no RC4
+ * Prefer ECDHE over DHE
  * Uses HTTP Strict Transport Security
  * Doesn't use Keypinning as it isn't stable at the moment.
 
