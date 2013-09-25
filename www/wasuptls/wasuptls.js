@@ -3,11 +3,11 @@ $(function() {
         url: "wasuptls/index.html",
 		type: "GET",
 		cache: "false",
-        success: function(data) { PHPtoJSResponse(data); }
+        success: function(data) { Response(data); }
    });
 });
  
-function PHPtoJSResponse(data) {
+function Response(data) {
    // process server response
    var response = $.parseJSON(data);
    var cipher = response.cipher;
@@ -38,7 +38,7 @@ function PHPtoJSResponse(data) {
    if (m == null) usingSSLv3 = false; 
    else usingSSLv3 = true; 
 
-   if(!usingFS || usingRC4 || usering3DES || usingSSLv3) {
+   if(!usingFS || usingRC4 || using3DES || usingSSLv3) {
     	var popup = '<div style="position: fixed; width: 100%; height: 100px; background-color: #3366CC; color: white; padding: 10px; bottom: 0; left:0; font-family: Helvetic, sans-serif; font-size: 12pt; box-shadow: 0 0 10px #000000 ">';
 	
 		popup += '<a href="#" onClick="$(this).parent().hide()"><img src="wasuptls/close_button.png" alt="(close)" style="float:right; margin-right: 20px" /></a>';
