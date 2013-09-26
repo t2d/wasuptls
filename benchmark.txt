@@ -1,0 +1,74 @@
+LOKALE TESTS
+------------
+
+# no TLS
+ab -n 10000 http://example.com/
+Requests per second:    4412.94 [#/sec] (mean)
+Time per request:       0.227 [ms] (mean)
+
+# IE6
+ab -n 10000 -f SSL3 -Z DES-CBC3-SHA https://example.com/
+Requests per second:    398.49 [#/sec] (mean)
+Time per request:       2.509 [ms] (mean)
+
+# AES265
+ab -n 10000 -Z AES256-SHA https://example.com/
+Requests per second:    389.78 [#/sec] (mean)
+Time per request:       2.566 [ms] (mean)
+
+# DH
+ab -n 10000 -f TLS1.0 -Z DHE-RSA-AES256-SHA https://example.com/
+Requests per second:    195.40 [#/sec] (mean)
+Time per request:       5.118 [ms] (mean)
+
+# ECDH
+ab -n 10000 -Z ECDHE-RSA-AES256-SHA https://example.com/
+Requests per second:    242.85 [#/sec] (mean)
+Time per request:       4.118 [ms] (mean)
+
+# ECDHE-ECDSA
+ab -n 10000 -Z ECDHE-ECDSA-AES256-SHA https://example.com/
+Requests per second:    303.00 [#/sec] (mean)
+Time per request:       3.300 [ms] (mean)
+
+
+REMOTE TESTS
+------------
+
+HTTP: 10 packets
+HTTPS: 18 packets
+
+# no TLS
+ab -n 10000 http://example.com/
+Requests per second:    99.06 [#/sec] (mean)
+Time per request:       10.095 [ms] (mean
+
+# IE6
+ab -n 10000 -f SSL3 -Z DES-CBC3-SHA https://example.com/
+Requests per second:    47.87 [#/sec] (mean)
+Time per request:       20.888 [ms] (mean)
+
+# DH
+ab -n 10000 -f TLS1.0 -Z DHE-RSA-AES256-SHA https://example.com/
+Requests per second:    36.00 [#/sec] (mean)
+Time per request:       27.778 [ms] (mean)
+
+# ECDH
+ab -n 10000 -Z ECDHE-RSA-AES256-SHA https://example.com/
+Requests per second:    45.97 [#/sec] (mean)
+Time per request:       21.751 [ms] (mean)
+
+# ECDHE-ECDSA
+ab -n 10000 -Z ECDHE-ECDSA-AES256-SHA https://example.com
+Requests per second:    47.58 [#/sec] (mean)
+Time per request:       21.016 [ms] (mean)
+
+REMOTE KEEP-ALIVE
+-----------------
+ab -n 10000 -k http://example.com/
+Requests per second:    273.86 [#/sec] (mean)
+Time per request:       3.652 [ms] (mean)
+
+ab -n 10000 -Z ECDHE-RSA-AES256-SHA -k https://example.com/
+Requests per second:    216.26 [#/sec] (mean)
+Time per request:       4.624 [ms] (mean)
