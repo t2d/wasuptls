@@ -1,6 +1,8 @@
 LOCAL TESTS
 ------------
 
+# Machine: 1*2GHz, 2GB RAM 
+
 # no TLS
 ab -n 10000 http://example.com/
 Requests per second:    4412.94 [#/sec] (mean)
@@ -42,6 +44,8 @@ REMOTE TESTS
 
 HTTP: 10 packets
 HTTPS: 18 packets
+
+# from Deutsches Forschungs Netz to German Colocation Provider
 
 # no TLS
 ab -n 10000 http://example.com/
