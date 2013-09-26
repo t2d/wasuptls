@@ -1,4 +1,4 @@
-LOKALE TESTS
+LOCAL TESTS
 ------------
 
 # no TLS
@@ -67,6 +67,7 @@ Time per request:       21.751 [ms] (mean)
 ab -n 10000 -Z ECDHE-ECDSA-AES256-SHA https://example.com
 Requests per second:    47.58 [#/sec] (mean)
 Time per request:       21.016 [ms] (mean)
+
 
 REMOTE KEEP-ALIVE
 -----------------
