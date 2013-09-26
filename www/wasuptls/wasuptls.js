@@ -26,11 +26,18 @@ function Response(data) {
    if (m == null) usingRC4 = false; 
    else usingRC4 = true; 
 
+   // Test for DES 
+   var usingDES;
+   var m = cipher.match(/DES/g);
+   if (m == null) usingDES = false; 
+   else usingDES = true; 
+
    // Test for 3DES 
    var using3DES;
-   var m = cipher.match(/DES/g);
+   var m = cipher.match(/3DES/g);
    if (m == null) using3DES = false; 
    else using3DES = true; 
+
 
    // Test for SSLv3
    var usingSSLv3;
@@ -38,7 +45,7 @@ function Response(data) {
    if (m == null) usingSSLv3 = false; 
    else usingSSLv3 = true; 
 
-   if(!usingFS || usingRC4 || using3DES || usingSSLv3) {
+   if(!usingFS || usingRC4 || usingDES || using3DES || usingSSLv3) {
     	var popup = '<div style="position: fixed; width: 100%; height: 100px; background-color: #3366CC; color: white; padding: 10px; bottom: 0; left:0; font-family: Helvetic, sans-serif; font-size: 12pt; box-shadow: 0 0 10px #000000 ">';
 	
 		popup += '<a href="#" onClick="$(this).parent().hide()"><img src="wasuptls/close_button.png" alt="(close)" style="float:right; margin-right: 20px" /></a>';
@@ -51,6 +58,13 @@ function Response(data) {
 	   }
 	   if (usingSSLv3) {
 		   popup += '<li>The <a href="http://en.wikipedia.org/wiki/Transport_Layer_Security#SSL_3.0">old SSLv3 standard</a> is used!</li>';
+	   }
+	   if (usingDES) {
+		   if (using3DES) {
+			   popup += '<li>The old 3DES standard is used!</li>';
+		   } else {
+			   popup += '<li>The old DES standard is used!</li>';
+		   }
 	   }
 	   popup += "</ul></div>";
 	   document.write(popup);
