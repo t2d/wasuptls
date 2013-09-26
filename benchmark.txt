@@ -6,6 +6,11 @@ ab -n 10000 http://example.com/
 Requests per second:    4412.94 [#/sec] (mean)
 Time per request:       0.227 [ms] (mean)
 
+# RC4
+ab -n 10000 -Z RC4-SHA https://example.com/
+Requests per second:    444.39 [#/sec] (mean)
+Time per request:       2.250 [ms] (mean)
+
 # IE6
 ab -n 10000 -f SSL3 -Z DES-CBC3-SHA https://example.com/
 Requests per second:    398.49 [#/sec] (mean)
