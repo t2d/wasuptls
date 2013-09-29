@@ -21,6 +21,11 @@ Decisions
  * HTTP Strict Transport Security
  * No Keypinning as it isn't stable at the moment.
 
+Benchmarks
+----------
+ * ab results in benchmark.txt
+ * Charts at https://sarwiki.informatik.hu-berlin.de/Modernes_SSL/TLS-Setup_mit_Apache#Benchmarks
+
 Sources
 -------
  * https://www.ssllabs.com/downloads/SSL_TLS_Deployment_Best_Practices_1.3.pdf
