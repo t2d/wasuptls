@@ -2,6 +2,7 @@ LOCAL TESTS
 ------------
 
 # Machine: 1*2GHz, 2GB RAM 
+# Find charts at https://sarwiki.informatik.hu-berlin.de/Modernes_SSL/TLS-Setup_mit_Apache#Benchmarks
 
 # no TLS
 ab -n 10000 http://example.com/
